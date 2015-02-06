@@ -1,3 +1,6 @@
+
+simply.fullscreen(true);
+
 simply.title('Hello World!');
 simply.vibe('short');
 
@@ -20,12 +23,17 @@ simply.on('singleClick', function(e) {
   
   simply.subtitle('You pressed the ' + e.button + ' button!');
   
-  geolocate();
 });
 
 // long click
 simply.on('longClick', function(e) {
-  simply.subtitle('You held the ' + e.button + ' button!');
+  
+  // simply.subtitle('You held the ' + e.button + ' button!');
+  
+  if( e.button == 'select' ) {
+    geolocate();
+  }
+  
 });
 
 simply.on('accelTap', function(e) {
