@@ -21,7 +21,8 @@ function geolocate () {
 // click
 simply.on('singleClick', function(e) {
   
-  simply.subtitle('You pressed the ' + e.button + ' button!');
+  simply.text({ title: 'singleClick', 
+                subtitle: 'You pressed the ' + e.button + ' button!' });
   
 });
 
@@ -37,5 +38,6 @@ simply.on('longClick', function(e) {
 });
 
 simply.on('accelTap', function(e) {
-  simply.subtitle('You tapped across ' + (e.direction > 0 ? '+' : '-') + e.axis + '!');
+  simply.text({ title: 'accelTap' ,
+                subtitle: 'You tapped across ' + (e.direction > 0 ? '+' : '-') + e.axis + '!' });
 });
